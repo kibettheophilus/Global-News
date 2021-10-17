@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_grapgh"
+    app:startDestination="@id/headLinesFragment">
+
+    <fragment
+        android:id="@+id/headLinesFragment"
+        android:name="dev.kibet.globalnews.ui.fragments.HeadLinesFragment"
+        android:label="fragment_head_lines"
+        tools:layout="@layout/fragment_head_lines" />
+</navigation>
