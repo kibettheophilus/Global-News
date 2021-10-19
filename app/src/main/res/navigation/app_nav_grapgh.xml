@@ -3,11 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_nav_grapgh"
-    app:startDestination="@id/headLinesFragment">
+    app:startDestination="@id/technologyFragment">
 
     <fragment
-        android:id="@+id/headLinesFragment"
-        android:name="dev.kibet.globalnews.ui.fragments.HeadLinesFragment"
-        android:label="fragment_head_lines"
+        android:id="@+id/technologyFragment"
+        android:name="dev.kibet.globalnews.ui.fragments.TechnologyFragment"
+        android:label="Technology"
         tools:layout="@layout/fragment_head_lines" />
+    <fragment
+        android:id="@+id/businessFragment"
+        android:name="dev.kibet.globalnews.ui.fragments.BusinessFragment"
+        android:label="Business"
+        tools:layout="@layout/fragment_business" />
+    <fragment
+        android:id="@+id/sportsFragment"
+        android:name="dev.kibet.globalnews.ui.fragments.SportsFragment"
+        android:label="Sports"
+        tools:layout="@layout/fragment_sports" />
 </navigation>

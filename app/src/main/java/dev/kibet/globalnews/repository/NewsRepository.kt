@@ -28,4 +28,21 @@ class NewsRepository @Inject constructor(
         }
     }
 
+    suspend fun getBusinessNews(): Resource<Article> {
+        return try {
+            val response = api.getBusinessNews()
+
+            Log.d("NEWSRESPONSE","$response")
+            Resource.success(response)
+        } catch (e: Exception) {
+            return if (e is HttpException) {
+                Log.d("NEWSRESPONSE","$e")
+                Resource.error(e.message(), null)
+            } else {
+                Log.d("NEWSRESPONSE","$e")
+                Resource.error("Could not connect to servers, $e", null)
+            }
+        }
+    }
+
 }

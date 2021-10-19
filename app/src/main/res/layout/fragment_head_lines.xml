@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.HeadLinesFragment">
+    tools:context=".ui.fragments.TechnologyFragment">
 
 <com.facebook.shimmer.ShimmerFrameLayout
     android:id="@+id/shimmer_layout"
@@ -47,7 +47,7 @@
 </com.facebook.shimmer.ShimmerFrameLayout>
 
 <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recycler_view"
+    android:id="@+id/headLines_recycler_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
@@ -55,16 +55,6 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:listitem="@layout/article_item"
     android:layout_marginHorizontal="10dp"/>
-
-    <ProgressBar
-        android:id="@+id/call_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="150dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

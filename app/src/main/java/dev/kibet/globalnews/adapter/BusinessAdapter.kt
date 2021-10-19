@@ -1,7 +1,6 @@
 package dev.kibet.globalnews.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
@@ -10,7 +9,7 @@ import com.bumptech.glide.Glide
 import dev.kibet.globalnews.data.model.ArticleX
 import dev.kibet.globalnews.databinding.ArticleItemBinding
 
-class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+class BusinessAdapter: RecyclerView.Adapter<BusinessAdapter.NewsViewHolder>() {
 
     class NewsViewHolder(val binding: ArticleItemBinding): RecyclerView.ViewHolder(binding.root)
     private val diffCallBack = object : DiffUtil.ItemCallback<ArticleX>(){

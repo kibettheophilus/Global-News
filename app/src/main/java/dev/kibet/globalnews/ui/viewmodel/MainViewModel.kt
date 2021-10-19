@@ -18,6 +18,10 @@ class MainViewModel @Inject constructor(
     private val _getHeadLinesStatus = MutableLiveData<Resource<Article>>()
     val getHeadlinesStatus: LiveData<Resource<Article>> = _getHeadLinesStatus
 
+
+    private val _getBusinessNewsStatus = MutableLiveData<Resource<Article>>()
+    val getBusinessNewsStatus: LiveData<Resource<Article>> = _getBusinessNewsStatus
+
     fun getHeadlines(){
         _getHeadLinesStatus.postValue(Resource.loading(null))
 
@@ -25,6 +29,16 @@ class MainViewModel @Inject constructor(
             val result = repository.getHeadlines()
 
             _getHeadLinesStatus.postValue(result)
+        }
+    }
+
+    fun getBusinessNews(){
+        _getBusinessNewsStatus.postValue(Resource.loading(null))
+
+        viewModelScope.launch {
+            val result = repository.getBusinessNews()
+
+            _getBusinessNewsStatus.postValue(result)
         }
     }
 }
