@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/article_item.xml" value="0.19025641025641027" />
         <entry key="app/src/main/res/layout/fragment_head_lines.xml" value="0.178125" />
+        <entry key="app/src/main/res/layout/shimmer_item.xml" value="0.18796296296296297" />
+        <entry key="app/src/main/res/layout/shimmer_item_placeholder.xml" value="0.19322916666666667" />
       </map>
     </option>
   </component>

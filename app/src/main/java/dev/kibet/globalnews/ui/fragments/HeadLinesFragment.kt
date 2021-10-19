@@ -50,18 +50,18 @@ class HeadLinesFragment : Fragment() {
             it?.let {
                 when (it.status) {
                     Status.SUCCESS -> {
-                        progressBar.visibility = View.GONE
+                        binding.shimmerLayout.stopShimmer()
+                        binding.shimmerLayout.visibility = View.GONE
                         it.data?.let { article ->
                             newsAdapter.differ.submitList(article.articles)
                             newsRecycler.adapter = newsAdapter
                         }
-                        Toast.makeText(context, "${it.data}", Toast.LENGTH_LONG).show()
                     }
                     Status.LOADING -> {
-
+                        //progressBar.visibility = View.VISIBLE
                     }
                     Status.ERROR -> {
-                        progressBar.visibility = View.GONE
+                        //progressBar.visibility = View.GONE
                         Toast.makeText(context, "${it.message}", Toast.LENGTH_LONG).show()
                     }
                 }
